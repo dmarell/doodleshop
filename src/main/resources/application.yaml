@@ -43,6 +43,10 @@ se.caglabs.doodleshop:
 
 spring:
   profiles: stage
+  datasource:
+    url: jdbc:mysql://localhost/doodleshop
+    username: root
+    password: doodlepass
 se.caglabs.doodleshop:
   backgroundcolor: magenta
 

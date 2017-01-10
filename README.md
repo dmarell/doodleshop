@@ -39,5 +39,19 @@ Create a doodle:
 Read created doodles:
 <code>$ curl http://localhost:8080/doodles?author=Homer</code>
 
+### Run with external MySQL
+
+Start a MySQL database:
+```
+$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=doodlepass -d -p 3306:3306 mysql:5.7
+```
+
+Connect a database tool and create a database:
+```
+create database doodleshop;
+```
+Run with "stage" environment: -Dse.caglabs.doodleshop.environment=stage
+
+
 Have fun,
 Daniel Marell

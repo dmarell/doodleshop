@@ -7,20 +7,21 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "doodle_message")
 public class DoodleMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "CREATEDAT", nullable = false)
+    @Column(name = "createdat", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
 
-    @Column(name = "AUTHOR", nullable = false)
+    @Column(name = "author", nullable = false)
     private String author;
 
-    @Column(name = "MESSAGE", nullable = false)
+    @Column(name = "message", nullable = false)
     private String message;
 
     public DoodleMessage() {
